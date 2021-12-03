@@ -148,7 +148,7 @@ body {
     position: relative;
   }
   .table tr:before{
-    content: attr(data);
+    content: attr(data-label);
     position:absolute;
     left: 0;
     width: 50%;

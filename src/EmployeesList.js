@@ -16,7 +16,7 @@ export function EmployeesList({ employees, setEmployees }) {
       .then((data) => setEmployees(data));
   };
 
-  useEffect(getEmployees, []);
+  useEffect(getEmployees, [setEmployees]);
 
   const deleteEmployee = (id) => {
     fetch(`https://616e488fa83a850017caa8e1.mockapi.io/employee/${id}`, {
@@ -106,18 +106,18 @@ function Employee({
 }) {
   return (
     <tr>
-      <td data="ID">{id}</td>
+      <td data-label="ID">{id}</td>
       {/* <td>
         <img className="employee-pic" src={avatar} alt={name} />
       </td> */}
-      <td data="Name">
+      <td data-label="Name">
         {name}
         {employeeDetail}
       </td>
-      <td data={email}>{email}</td>
-      <td data="PhoneNo">{phone}</td>
-      <td data="Job">{job}</td>
-      <td data="Salary">${salary}</td>
+      <td data-label="Email">{email}</td>
+      <td data-label="PhoneNo">{phone}</td>
+      <td data-label="Job">{job}</td>
+      <td data-label="Salary">${salary}</td>
       <td><div className="btn">{editButton}{deleteButton}</div></td>
     </tr>
   );
