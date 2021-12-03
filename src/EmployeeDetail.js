@@ -11,7 +11,7 @@ export function EmployeeDetail() {
     })
       .then((res) => res.json())
       .then((data) => setEmployee(data));
-  }, []);
+  }, [id]);
   return (
     <div className="emp-card">
       <div className="emp-detail">
