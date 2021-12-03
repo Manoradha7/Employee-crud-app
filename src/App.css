@@ -1,38 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Aladin&family=Alfa+Slab+One&family=Bree+Serif&family=Poppins:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
+  font-family: "Poppins", sans-serif;
+}
+.App-title {
   text-align: center;
+  font-size: xx-large;
+  font-weight: 400;
+  font-variant: initial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span {
+  color: magenta;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(214, 221, 228);
+  font-family: sans-serif;
+}
+.employee-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 10%;
+  margin: 40px auto 0;
 }
 
-.App-link {
-  color: #61dafb;
+.list-name {
+  font-size: 30px;
+  text-align: center;
+  color: brown;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.table thead {
+  background-color: maroon;
+}
+
+.table thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: antiquewhite;
+  opacity: 1;
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid wheat;
+}
+.table tbody tr td {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.35px;
+  color: bisque;
+  background-color: #3c3f44;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #dee2e685;
+}
+.table>tbody>tr:hover{
+  color: rgb(59, 19, 39);
+  background-color: cornflowerblue;
+}
+
+.employee-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.add-employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 350px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid skyblue;
+  background: rgba(80, 227, 194, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 15px;
+}
+
+.emp-card {
+  display: flex;
+  justify-content: center;
+}
+
+.emp-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid skyblue;
+  border-radius: 15px;
+}
+.emp-detail > p {
+  display: flex;
+  margin: 1px;
+  gap: 1.7px;
+}
+.btn{
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px){
+  .table thead{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .table, .table tbody,.table tr,.table td{
+    display: block;
+    width: 100%;
+  }
+  .table tr{
+    margin-bottom: 15px;
+  }
+  .table tbody tr td{
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table tr:before{
+    content: attr(data);
+    position:absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
   }
 }
